@@ -1,0 +1,8 @@
+class HelloWorld {
+    public static void main(String[] args) {
+ // local variable: variable declared and initialised within the main method
+       int x=10;
+       System.out.println(x+" is a local variable");
+    }
+}
+// we dont have global variables in java
