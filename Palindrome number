@@ -1,0 +1,26 @@
+// 123
+//  last= 3, n = 12 , first = 0*10+3
+// 
+
+import java.util.*;
+public class Main {
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+       System.out.print("Enter the number: ");
+       int n=sc.nextInt();
+       int last=0;
+       int first=0;
+       int clone=n;
+    while(n!=0)
+    {
+        last = n%10;
+        first = first * 10 + last;
+        n= n/10;
+    }
+    if(clone==first)
+    System.out.print("The number is palinbdrome");
+    else 
+    System.out.print("The number is not palindrome");
+    }
+}
