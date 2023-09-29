@@ -1,0 +1,32 @@
+/* to check is two strings are anagram or not  
+1.Remove spaces and convert both strings to lowercase (if case-insensitive comparison is desired).
+2.Convert the strings to character arrays.
+3.Sort the character arrays.
+4.Compare the sorted arrays to check if they are equal. */
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+        System.out.print("Enter another string: ");
+        String str1 = sc.nextLine();
+           
+       str = str.replaceAll(" \\s+","").toLowerCase();
+       str1 = str1.replaceAll(" \\s+","").toLowerCase();
+       
+       char[] s= str.toCharArray();
+       char[] s1= str1.toCharArray();
+       
+       Arrays.sort(s);
+       Arrays.sort(s1);
+       
+      boolean res= Arrays.equals(s, s1);
+      
+      if(res)
+      System.out.print("Strings are anagram");
+      else System.out.print("Strings are not anagram");
+}
+}
