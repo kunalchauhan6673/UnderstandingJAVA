@@ -1,0 +1,26 @@
+// making a new string, adding all the non vowels in it
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+{
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        String s = sc.nextLine();          // kunal is my name 
+        
+        String [] word = s.split("\\s+"); //kunal,is,my,name
+        
+        int size=word.length;       
+        int max=word[0].length();         // assuming the length of first word in string array is the max
+        String largestword = word[0];
+        
+        for(int i=0;i<size;i++)
+        {
+            if(max<word[i].length())     // verifying our assumption
+            {
+                largestword = word[i];
+                max = word[i].length();
+            }
+        }
+        System.out.print("Largest word is "+largestword);
+}
+}
