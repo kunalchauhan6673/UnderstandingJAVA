@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the string: ");
+        String str = sc.nextLine();  // Hello
+
+        int n = str.length();
+        char[] charArray = str.toCharArray(); //  H,e,l,l,o , basically made it so we can access each character in a string
+
+        for (int i = 0; i < n / 2; i++) 
+        {
+            int j = n - i - 1;
+            char temp = charArray[i];
+            charArray[i] = charArray[j];
+            charArray[j] = temp;
+        }
+
+        String reversedString = new String(charArray);   // stored the character array in a new string called reversedString
+        System.out.print("The Reversed String is: " + reversedString);
+    }
+}
