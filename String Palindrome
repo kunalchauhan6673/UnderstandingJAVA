@@ -7,6 +7,8 @@ public class Main {
         // char s[] = str.toCharArray();   H,e,l,l,o now we can use s as an array instead of writing str.charAt everywhere
         
         int n=str.length();
+        str = str.replaceAll("\\s", "").toLowerCase(); // to avoid space and upper-lower case complication
+
         char s[]= str.toCharArray();
         for(int i=0;i<n/2;i++)
         {
