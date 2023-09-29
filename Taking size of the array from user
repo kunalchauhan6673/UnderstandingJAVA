@@ -1,0 +1,13 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) 
+    {
+        Scanner obj = new Scanner (System.in);
+       System.out.print("Enter the size of the array: ");
+       int x = obj.nextInt();
+       for(int i=0;i<x;i++)
+       {
+           System.out.println(i);
+       }
+    }
+}
