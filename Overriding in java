@@ -1,0 +1,18 @@
+class Shape {
+    Shape() {
+        System.out.println("Shape constructor");
+    }
+}
+
+class Circle extends Shape {
+    Circle() {
+        super(); // Calls the constructor of the superclass (Shape)
+        System.out.println("Circle constructor");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(); // Creating an object of the Circle class
+    }
+}
