@@ -1,0 +1,20 @@
+public class StringIndexOfExample {
+    public static void main(String[] args) {
+        String str = "abcabcabc";
+        String searchString = "a";
+        int count = 0;
+        
+        // Start searching from the beginning of the string
+        int index = str.indexOf(searchString); // caught at 0
+        
+        while (index != -1) 
+        {
+            // Increment the count when a match is found
+            count++;  // 1 then 2 then 3
+            // Start searching again after the last match
+            index = str.indexOf(searchString, index + 1); // from 1, caught at 3, from 4 caught at 6
+        }
+        
+        System.out.println("Count of '" + searchString + "' in '" + str + "': " + count);
+    }
+}
