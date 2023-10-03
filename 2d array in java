@@ -1,0 +1,14 @@
+// Specify the dimensions of the 2D array
+int rows = 3; // Number of rows
+int cols = 4; // Number of columns
+
+// Declare and initialize the 2D array
+int[][] twoDArray = new int[rows][cols];
+
+// Initialize the elements of the 2D array
+for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+        // Assign a value to the current element
+        twoDArray[i][j] = i * cols + j;
+    }
+}
