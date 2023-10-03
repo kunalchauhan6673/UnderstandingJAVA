@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+class Student {
+    private String name;
+    private int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter the number of students: ");
+        int numStudents = scanner.nextInt();
+        scanner.nextLine(); 
+        
+        Student[] students = new Student[numStudents];
+
+       
+        for (int i = 0; i < students.length; i++) {
+            System.out.println("Enter details for Student " + (i + 1) + ":");
+            System.out.print("Name: ");
+            String name = scanner.nextLine();
+            System.out.print("Age: ");
+            int age = scanner.nextInt();
+            scanner.nextLine(); 
+
+            students[i] = new Student(name, age);
+        }
+
+        
+        scanner.close();
+
+        
+        System.out.println("\nStudent Details:");
+        for (int i = 0; i < students.length; i++) {
+            System.out.println("Student " + (i + 1) + ":");
+            System.out.println("Name: " + students[i].getName());
+            System.out.println("Age: " + students[i].getAge());
+            System.out.println();
+        }
+    }
+}
